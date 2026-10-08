@@ -16,3 +16,6 @@ reports/generated/**/*
 .env.*
 !.env.example
 .DS_Store
+
+# Local release-tool dependencies
+node_modules/
