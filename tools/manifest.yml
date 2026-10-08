@@ -1,0 +1,18 @@
+# Tool references are kept here so the stack can be reproduced across machines.
+primary:
+  - name: Ghidra
+    source: https://github.com/NationalSecurityAgency/ghidra
+    role: native binary analysis and decompilation
+supporting:
+  - name: angr
+    source: https://github.com/angr/angr
+    role: symbolic execution and scripted binary analysis
+  - name: CodeQL
+    source: https://github.com/github/codeql
+    role: source and compiled-language query analysis
+  - name: Semgrep
+    source: https://github.com/semgrep/semgrep
+    role: source pattern and dataflow analysis
+  - name: Joern
+    source: https://github.com/joernio/joern
+    role: code property graph analysis
