@@ -1,0 +1,18 @@
+# Generated analysis databases and local tool state
+*.gpr
+*.rep
+*.gpr.lock
+.gradle/
+.ghidra/
+.cache/
+
+# Inputs and generated artifacts; keep metadata and hashes in Git
+samples/**/*
+!samples/.gitkeep
+reports/generated/**/*
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+.DS_Store

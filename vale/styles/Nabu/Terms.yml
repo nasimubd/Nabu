@@ -1,0 +1,7 @@
+extends: substitution
+message: "Use '%s' as the project name."
+level: suggestion
+ignorecase: false
+swap:
+  - ["NABU", "Nabu"]
+  - ["nabu", "Nabu"]
