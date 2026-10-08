@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#MISE description="Validate release prerequisites on main."
+set -euo pipefail
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)/scripts/release/lib.sh"
+check_clean_tree
+check_on_main
+check_remote_main
+ensure_gh_token
+check_commits_conventional
+mise run release:check

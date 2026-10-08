@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#MISE description="Verify the release tag, tree, and remote main."
+set -euo pipefail
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)/scripts/release/lib.sh"
+check_clean_tree
+check_on_main
+check_remote_main
+latest_tag="$(git describe --tags --abbrev=0)"
+if [ "$latest_tag" != "v$(cat VERSION)" ]; then echo "latest tag and VERSION disagree" >&2; exit 1; fi
+echo "release postflight passed"

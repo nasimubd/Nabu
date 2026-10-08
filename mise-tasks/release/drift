@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#MISE description="Show the recorded version, latest tag, and unreleased commits."
+set -euo pipefail
+printf 'Current version: %s\n' "$(cat VERSION)"
+latest_tag="$(git describe --tags --abbrev=0 2>/dev/null || true)"
+printf 'Latest tag: %s\n' "${latest_tag:-none}"
+if [ -n "$latest_tag" ]; then git log --oneline "$latest_tag..HEAD"; else git log --oneline --max-count=20; fi

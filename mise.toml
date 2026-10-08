@@ -1,0 +1,11 @@
+[tools]
+node = "22"
+
+[tasks]
+"release:check" = "mise-tasks/release/check"
+"release:drift" = "mise-tasks/release/drift"
+"release:dry" = "mise-tasks/release/dry"
+"release:full" = "mise-tasks/release/full"
+"release:preflight" = "mise-tasks/release/preflight"
+"release:version" = "mise-tasks/release/version"
+"release:postflight" = "mise-tasks/release/postflight"

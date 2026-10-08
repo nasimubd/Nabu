@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="Create a version, changelog, tag, and GitHub Release."
+set -euo pipefail
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)/scripts/release/lib.sh"
+ensure_gh_token
+npx --no-install semantic-release --no-ci --extends ./release.config.cjs

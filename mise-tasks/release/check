@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#MISE description="Validate release tooling and tests."
+set -euo pipefail
+npm ci --ignore-scripts
+node --check release.config.cjs
+node --check scripts/release/commitlint.cjs
+node --check scripts/release/sync-version.cjs
+npm run test:release
