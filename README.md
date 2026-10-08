@@ -46,3 +46,15 @@ analyzeHeadless <project-location> <project-name> -import <target>
 - `scripts/`: reproducible helper scripts
 - `tools/`: pinned tool and source references
 - `vale/`: writing checks and the Nabu glossary
+
+## Releases
+
+Nabu uses Conventional Commits and semantic version tags in the form `vMAJOR.MINOR.PATCH`. The release steward runs the ordered Mise workflow from clean, current `main`:
+
+```bash
+mise run release:drift
+mise run release:dry
+mise run release:full
+```
+
+The workflow updates `VERSION` and `CHANGELOG.md`, creates the tag, and publishes a GitHub Release. The release convention check runs on pull requests and pushes to `main`. Nabu has no binary publication step; case inputs and generated analysis artifacts remain outside Git.

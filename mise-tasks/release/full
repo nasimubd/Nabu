@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="Run preflight, semantic-release, and postflight."
+set -euo pipefail
+mise run release:preflight
+mise run release:version
+mise run release:postflight
