@@ -19,3 +19,7 @@ reports/generated/**/*
 
 # Local release-tool dependencies
 node_modules/
+
+# Python bytecode
+__pycache__/
+*.py[cod]

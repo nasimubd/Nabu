@@ -16,3 +16,7 @@ supporting:
   - name: Joern
     source: https://github.com/joernio/joern
     role: code property graph analysis
+
+# The one-command installer provisions Ghidra, angr, Semgrep, and radare2
+# where the platform package manager supplies radare2. CodeQL and Joern are
+# optional research integrations and are not provisioned by the installer.
